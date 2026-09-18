@@ -1,0 +1,3 @@
+<?php
+declare(strict_types=1); namespace Neok\Pay\Resources; use Neok\Pay\Client; use Neok\Pay\DTO\Payment; use Neok\Pay\Exceptions\ApiException;
+final readonly class Payments { public function __construct(private Client $client){} public function retrieve(string $paymentId): Payment { $response=$this->client->request('GET','payments/'.rawurlencode($paymentId));if($response->getStatusCode()!==200)$this->client->parser()->error($response);$data=$this->client->parser()->json($response)['data']??null;if(!is_array($data))throw new ApiException('NEOK Pay returned an invalid payment response.',200);return $this->client->parser()->payment($data);} }

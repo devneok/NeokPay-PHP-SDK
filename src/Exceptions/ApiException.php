@@ -1,0 +1,1 @@
+<?php declare(strict_types=1); namespace Neok\Pay\Exceptions; class ApiException extends NeokPayException { /** @param array<string,mixed> $details */ public function __construct(string $message, public readonly int $statusCode, public readonly ?string $apiCode = null, public readonly array $details = []) { parent::__construct($message); } }

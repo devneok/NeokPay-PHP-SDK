@@ -1,0 +1,48 @@
+{
+  "name": "neok/neokpay-php",
+  "description": "Framework-independent PHP SDK for the NEOK Pay Merchant API.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.3",
+    "psr/http-client": "^1.0",
+    "psr/http-factory": "^1.1",
+    "psr/http-message": "^1.1"
+  },
+  "require-dev": {
+    "nyholm/psr7": "^1.8",
+    "phpstan/phpstan": "^1.12",
+    "phpunit/phpunit": "^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Neok\\Pay\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Neok\\Pay\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "analyse": "phpstan analyse"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "archive": {
+    "exclude": [
+      "/vendor", "/.git", "/.github", "/.env", "/.env.*",
+      "/composer.lock", "/tests", "/phpunit.xml", "/phpstan.neon",
+      "/.phpunit*", "/.phpstan*", "/coverage", "/.idea", "/.vscode",
+      "/PHASE-*.md", "/SERVER-SANDBOX-PLAN.md", "/tmp", "/test-apps",
+      "/composer.local.*", "*.bak", "*.backup", "*.orig", "*.rej", "*~"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "1.0.x-dev"
+    }
+  }
+}

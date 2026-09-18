@@ -1,0 +1,1 @@
+<?php declare(strict_types=1); namespace Neok\Pay\Exceptions; final class ValidationException extends ApiException { /** @return array<string,mixed> */ public function errors(): array { return $this->details; } }
