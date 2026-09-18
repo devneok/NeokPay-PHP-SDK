@@ -7,7 +7,7 @@ $mode = $argv[1];
 if ($mode !== 'no-composer') {
     require dirname(__DIR__).'/vendor/composer/InstalledVersions.php';
     $versions = $mode === 'missing-package' ? [] : [
-        'neok/neokpay-php' => [
+        'devneok/neokpay-php' => [
             'pretty_version' => $mode === 'null-version' ? null : $argv[2],
             'dev_requirement' => false,
         ],

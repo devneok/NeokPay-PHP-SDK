@@ -30,11 +30,11 @@ final readonly class ClientConfig
 
     private function packageVersion(): string
     {
-        if (! class_exists(InstalledVersions::class) || ! InstalledVersions::isInstalled('neok/neokpay-php')) {
+        if (! class_exists(InstalledVersions::class) || ! InstalledVersions::isInstalled('devneok/neokpay-php')) {
             return 'development';
         }
 
-        $version = InstalledVersions::getPrettyVersion('neok/neokpay-php');
+        $version = InstalledVersions::getPrettyVersion('devneok/neokpay-php');
         // Composer's unversioned root placeholder is not a real stable release.
         if ($version === null || str_contains($version, 'no-version-set')
             || preg_match('/\A[A-Za-z0-9][A-Za-z0-9.+_-]*\z/', $version) !== 1) {

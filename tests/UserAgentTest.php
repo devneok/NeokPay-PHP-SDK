@@ -34,12 +34,12 @@ final class UserAgentTest extends TestCase
     public static function versions(): array
     {
         return [
-            'beta' => ['installed', '1.0.0-beta.1', '', '1.0.0-beta.1'],
-            'tag prefix' => ['installed', 'v1.0.0-beta.1', '', 'v1.0.0-beta.1'],
+            'beta' => ['installed', '1.0.0-beta.2', '', '1.0.0-beta.2'],
+            'tag prefix' => ['installed', 'v1.0.0-beta.2', '', 'v1.0.0-beta.2'],
             'dev branch' => ['installed', 'dev-main', '', 'dev-main'],
             'dev alias' => ['installed', '1.0.x-dev', '', '1.0.x-dev'],
             'future stable metadata' => ['installed', '1.1.0', '', '1.1.0'],
-            'suffix' => ['installed', '1.0.0-beta.1', 'my-app/2.3', '1.0.0-beta.1 my-app/2.3'],
+            'suffix' => ['installed', '1.0.0-beta.2', 'my-app/2.3', '1.0.0-beta.2 my-app/2.3'],
             'no Composer' => ['no-composer', '', '', 'development'],
             'missing package' => ['missing-package', '', '', 'development'],
             'null metadata' => ['null-version', '', '', 'development'],

@@ -1,5 +1,5 @@
 {
-  "name": "neok/neokpay-php",
+  "name": "devneok/neokpay-php",
   "description": "Framework-independent PHP SDK for the NEOK Pay Merchant API.",
   "type": "library",
   "license": "MIT",

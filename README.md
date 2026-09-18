@@ -2,15 +2,15 @@
 
 Framework-independent PHP ^8.3 client for NEOK Pay Merchant API v1. It has no Laravel or Stellar dependency.
 
-**Controlled beta candidate: 1.0.0-beta.1. Not tagged or published yet.** Use only the approved beta distribution. Do not start live payments merely to try the SDK; see [BETA-PLAN.md](BETA-PLAN.md).
+**Controlled beta candidate: 1.0.0-beta.2. Not tagged or published yet.** Use only the approved beta distribution. Do not start live payments merely to try the SDK; see [BETA-PLAN.md](BETA-PLAN.md).
 
 ## Installation
 
 ```bash
-composer require "neok/neokpay-php:1.0.0-beta.1"
+composer require "devneok/neokpay-php:1.0.0-beta.2"
 ```
 
-This command becomes usable once the beta is tagged and available in your registry. It was solver-tested against local simulated beta metadata, not an existing public release. To opt into later compatible betas, use `"neok/neokpay-php:^1.0.0-beta.1@beta"`.
+This command becomes usable once the beta is tagged and available in your registry. It was solver-tested against local simulated beta metadata, not an existing public release. To opt into later compatible betas, use `"devneok/neokpay-php:^1.0.0-beta.2@beta"`.
 
 The SDK User-Agent reports the installed Composer version, including beta/development versions. Without usable metadata it reports `neokpay-php/development`, never an assumed stable release. An optional `userAgentSuffix` remains available in `ClientConfig`.
 
